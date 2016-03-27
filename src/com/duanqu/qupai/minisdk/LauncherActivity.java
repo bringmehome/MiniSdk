@@ -114,7 +114,7 @@ public class LauncherActivity extends Activity {
                 .setWaterMarkPosition(1)//水印位置
                 .setBeautyProgress(beautySkinProgress)//美颜参数
                 .setBeautySkinOn(true)//是否开启美颜
-                .setCameraFacing(1)//1 开启 前摄像头0开启后摄像头
+                .setCameraFacing(0)//1 开启 前摄像头0开启后摄像头
                 .setVideoSize(480,480)//输出视频的尺寸–建议320*240 480*480 360*640
                 .setCaptureHeight(getResources().getDimension(R.dimen.qupai_recorder_capture_height_size))//拍摄布局
                 .setBeautySkinViewOn(true)//美颜是否显示
@@ -124,13 +124,12 @@ public class LauncherActivity extends Activity {
 
         _CreateInfo.setSessionCreateInfo(create_info);
         _CreateInfo.setNextIntent(null);
-        _CreateInfo.setOutputThumbnailSize(360, 640);//输出图片宽高
-        videoPath = FileUtils.newOutgoingFilePath(this);
+        _CreateInfo.setOutputThumbnailSize(480, 480);//输出图片宽高
+        videoPath = Contant.VIDEOPATH;
         _CreateInfo.setOutputVideoPath(videoPath);//输出视频路径
-        _CreateInfo.setOutputThumbnailPath(videoPath + ".png");//输出图片路径
+        _CreateInfo.setOutputThumbnailPath(Contant.THUMBPATH);//输出图片路径
 
-        QupaiServiceImpl qupaiService= new QupaiServiceImpl.Builder()
-                .setEditorCreateInfo(_CreateInfo).build();
+        QupaiServiceImpl qupaiService= new QupaiServiceImpl.Builder().setEditorCreateInfo(_CreateInfo).build();
         qupaiService.showRecordPage(this,QUPAI_RECORD_REQUEST);
     }
 
@@ -144,12 +143,14 @@ public class LauncherActivity extends Activity {
             Log.d(TAG, result.getThumbnail().toString());
             Log.d(TAG, result.getDuration().toString());
 
+            FileUtils.folderScan(LauncherActivity.this, Contant.FILEPATH);
+            
             //开始上传，上传前请务必确认已调用授权接口
-            startUpload();
+//            startUpload();
 
             //删除草稿
-//            QupaiDraftManager draftManager =new QupaiDraftManager();
-//            draftManager.deleteDraft(data);
+            QupaiDraftManager draftManager =new QupaiDraftManager();
+            draftManager.deleteDraft(data);
         }
     }
 

@@ -233,7 +233,7 @@ public class UploadActivity extends Activity implements UploadAdapter.Callback, 
         _CreateInfo.setSessionCreateInfo(create_info);
         _CreateInfo.setDurationNano(TimeUnit.MILLISECONDS.toNanos(8));
         _CreateInfo.setNextIntent(null);
-        videoPath = FileUtils.newOutgoingFilePath(this);
+        videoPath = FileUtils.newOutgoingFilePath();
         _CreateInfo.setOutputVideoPath(videoPath);
         _CreateInfo.setOutputThumbnailSize(240, 427);
         _CreateInfo.setOutputThumbnailPath(videoPath+ ".png");
