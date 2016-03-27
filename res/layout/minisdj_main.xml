@@ -18,18 +18,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_max_time"
-                    android:textSize="@dimen/font_24sp" />
-
-                <EditText
-                    android:id="@+id/edit_max_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/default_time"
-                    android:numeric="integer" />
             </LinearLayout>
 
             <LinearLayout
@@ -37,18 +25,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_min_time"
-                    android:textSize="@dimen/font_24sp" />
-
-                <EditText
-                    android:id="@+id/edit_min_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/default_min_time"
-                    android:numeric="integer" />
             </LinearLayout>
 
             <LinearLayout
@@ -56,176 +32,48 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_rate"
-                    android:textSize="@dimen/font_24sp" />
+            </LinearLayout>
 
-                <EditText
-                    android:id="@+id/edit_max_rate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/defalut_rate"
-                    android:numeric="integer" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/camera_font_on"
-                    android:textSize="@dimen/font_24sp" />
+            </LinearLayout>
 
-                <Switch
-                    android:id="@+id/camera_font_on"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/beauty_skin_on"
-                    android:textSize="@dimen/font_24sp" />
+            </LinearLayout>
 
-                <Switch
-                    android:id="@+id/beauty_skin_on"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/flash_light_view_on"
-                    android:textSize="@dimen/font_24sp" />
-
-                <Switch
-                    android:id="@+id/flashlight_view_on"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
+                
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/beauty_skin_view_on"
-                    android:textSize="@dimen/font_24sp" />
-
-                <Switch
-                    android:id="@+id/beauty_skin_view_on"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/timeline_indicator_on"
-                    android:textSize="@dimen/font_24sp" />
-
-                <Switch
-                    android:id="@+id/timeline_indicator_on"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/beauty_skin_progress"
-                    android:textSize="@dimen/font_24sp" />
-
-                <EditText
-                    android:id="@+id/beauty_skin_progress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/defalut_beauty_progress"
-                    android:numeric="integer" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/capture_height"
-                    android:textSize="@dimen/font_24sp" />
-
-                <EditText
-                    android:id="@+id/capture_height"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/capture_height_hint"
-                    android:numeric="integer" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/output_video_size"
-                android:textSize="@dimen/font_24sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/video_width" />
-
-                <EditText
-                    android:id="@+id/edit_output_video_width"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:numeric="integer" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/video_height" />
-
-                <EditText
-                    android:id="@+id/edit_output_video_height"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:numeric="integer" />
-            </LinearLayout>
 
             <Button
                 android:id="@+id/qupai_mini_record"

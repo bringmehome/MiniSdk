@@ -6,16 +6,12 @@ import java.util.UUID;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Switch;
 
 import com.duanqu.qupai.android.app.QupaiDraftManager;
 import com.duanqu.qupai.android.app.QupaiServiceImpl;
@@ -33,26 +29,12 @@ import com.duanqu.qupai.upload.QupaiUploadListener;
 import com.duanqu.qupai.upload.UploadService;
 
 public class LauncherActivity extends Activity {
-    private static final String TAG = "Upload";
+    private static final String TAG = "---LauncherActivity---";
     private static final String AUTHTAG = "QupaiAuth";
     private static int QUPAI_RECORD_REQUEST = 1;
-    EditText edit_min_time;
-    EditText edit_max_time;
-    EditText edit_max_rate;
-    EditText beauty_skin_progress;
-
-    private Switch beauty_skin_on;
-    private Switch camera_font_on;
-
-    private Switch flashlight_view_on;
-    private Switch beauty_skin_view_on;
-    private Switch timeline_indicator_on;
 
     private int beautySkinProgress;
-    private EditText edit_output_video_width;
-    private EditText edit_output_video_height;
 
-    private EditText capture_height;
     private Button mini_upload;
     private Button btn_open_video;
 
@@ -101,37 +83,21 @@ public class LauncherActivity extends Activity {
     }
 
     private void init() {
-        edit_min_time = (EditText) findViewById(R.id.edit_min_time);
-        edit_max_time = (EditText) findViewById(R.id.edit_max_time);
-        edit_max_rate = (EditText) findViewById(R.id.edit_max_rate);
 
-        beauty_skin_progress = (EditText) findViewById(R.id.beauty_skin_progress);
-        beauty_skin_on = (Switch) findViewById(R.id.beauty_skin_on);
-        camera_font_on = (Switch) findViewById(R.id.camera_font_on);
-        flashlight_view_on = (Switch) findViewById(R.id.flashlight_view_on);
-        beauty_skin_view_on = (Switch) findViewById(R.id.beauty_skin_view_on);
-        timeline_indicator_on = (Switch) findViewById(R.id.timeline_indicator_on);
-
-        edit_output_video_width = (EditText) findViewById(R.id.edit_output_video_width);
-        edit_output_video_height = (EditText) findViewById(R.id.edit_output_video_height);
-
-        edit_output_video_width.setText("" + 360);
-        edit_output_video_height.setText("" + 640);
-
-        capture_height = (EditText) findViewById(R.id.capture_height);
     }
 
     private void startRecordActivity() {
         //美颜参数:1-100.这里不设指定为80,这个值只在第一次设置，之后在录制界面滑动美颜参数之后系统会记住上一次滑动的状态
-        beautySkinProgress = Integer.valueOf(TextUtils.isEmpty(beauty_skin_progress.getText()) ? "80" : beauty_skin_progress.getText().toString());
+        beautySkinProgress = 80;
 
         /**
          * 压缩参数，可以自由调节
          */
         MovieExportOptions movie_options = new MovieExportOptions.Builder()
                 .setVideoProfile("high")
-                .setVideoBitrate(TextUtils.isEmpty(edit_max_rate.getText()) ? Contant.DEFAULT_BITRATE : Integer.valueOf(edit_max_rate.getText().toString()))
-                .setVideoPreset(Contant.DEFAULT_VIDEO_Preset).setVideoRateCRF(Contant.DEFAULT_VIDEO_RATE_CRF)
+                .setVideoBitrate(Contant.DEFAULT_BITRATE)//码率
+                .setVideoPreset(Contant.DEFAULT_VIDEO_Preset)
+                .setVideoRateCRF(Contant.DEFAULT_VIDEO_RATE_CRF)
                 .setOutputVideoLevel(Contant.DEFAULT_VIDEO_LEVEL)
                 .setOutputVideoTune(Contant.DEFAULT_VIDEO_TUNE)
                 .configureMuxer(Contant.DEFAULT_VIDEO_MOV_FLAGS_KEY, Contant.DEFAULT_VIDEO_MOV_FLAGS_VALUE)
@@ -141,21 +107,19 @@ public class LauncherActivity extends Activity {
          * 界面参数
          */
         VideoSessionCreateInfo create_info = new VideoSessionCreateInfo.Builder()
-                .setOutputDurationLimit(TextUtils.isEmpty(edit_max_time.getText()) ? Contant.DEFAULT_DURATION_MAX_LIMIT : Integer.valueOf(edit_max_time.getText().toString()))
-                .setOutputDurationMin(TextUtils.isEmpty(edit_min_time.getText()) ? Contant.DEFAULT_DURATION_LIMIT_MIN : Integer.valueOf(edit_min_time.getText().toString()))
+                .setOutputDurationLimit(Contant.DEFAULT_DURATION_MAX_LIMIT)//最大时长
+                .setOutputDurationMin(Contant.DEFAULT_DURATION_LIMIT_MIN)//最短时长
                 .setMovieExportOptions(movie_options)
-                .setWaterMarkPath(Contant.WATER_MARK_PATH)
-                .setWaterMarkPosition(1)
-                .setBeautyProgress(beautySkinProgress)
-                .setBeautySkinOn(beauty_skin_on.isChecked())
-                .setCameraFacing(camera_font_on.isChecked() ? Camera.CameraInfo.CAMERA_FACING_FRONT :
-                        Camera.CameraInfo.CAMERA_FACING_BACK)
-                .setVideoSize(TextUtils.isEmpty(edit_output_video_width.getText().toString()) ? 480 : Integer.valueOf(edit_output_video_width.getText().toString()),
-                        TextUtils.isEmpty(edit_output_video_height.getText().toString()) ? 480 : Integer.valueOf(edit_output_video_height.getText().toString()))
-                .setCaptureHeight(TextUtils.isEmpty(capture_height.getText().toString()) ? getResources().getDimension(R.dimen.qupai_recorder_capture_height_size) : Float.valueOf(capture_height.getText().toString()))
-                .setBeautySkinViewOn(beauty_skin_view_on.isChecked() ? true : false)
-                .setFlashLightOn(flashlight_view_on.isChecked() ? true : false)
-                .setTimelineTimeIndicator(timeline_indicator_on.isChecked() ? true : false)
+                .setWaterMarkPath(Contant.WATER_MARK_PATH)//水印路径
+                .setWaterMarkPosition(1)//水印位置
+                .setBeautyProgress(beautySkinProgress)//美颜参数
+                .setBeautySkinOn(true)//是否开启美颜
+                .setCameraFacing(1)//1 开启 前摄像头0开启后摄像头
+                .setVideoSize(480,480)//输出视频的尺寸–建议320*240 480*480 360*640
+                .setCaptureHeight(getResources().getDimension(R.dimen.qupai_recorder_capture_height_size))//拍摄布局
+                .setBeautySkinViewOn(true)//美颜是否显示
+                .setFlashLightOn(true)//闪光灯是否显示
+                .setTimelineTimeIndicator(true)//时间提示是否显示
                 .build();
 
         _CreateInfo.setSessionCreateInfo(create_info);
@@ -176,16 +140,16 @@ public class LauncherActivity extends Activity {
         if (resultCode == RESULT_OK) {
             EditorResult result = new EditorResult(data);
             //得到视频path，和缩略图path的数组，返回十张缩略图,和视频时长
-            result.getPath();
-            result.getThumbnail();
-            result.getDuration();
+            Log.d(TAG, result.getPath());
+            Log.d(TAG, result.getThumbnail().toString());
+            Log.d(TAG, result.getDuration().toString());
 
             //开始上传，上传前请务必确认已调用授权接口
             startUpload();
 
             //删除草稿
-            QupaiDraftManager draftManager =new QupaiDraftManager();
-            draftManager.deleteDraft(data);
+//            QupaiDraftManager draftManager =new QupaiDraftManager();
+//            draftManager.deleteDraft(data);
         }
     }
 
