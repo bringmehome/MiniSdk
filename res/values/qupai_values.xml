@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="reference" name="horizontalProgressLayout"/>
+    <attr name="layout_reference">
+        <flag name="top" value="0x30"/>
+        <flag name="bottom" value="0x50"/>
+        <flag name="left" value="0x03"/>
+        <flag name="right" value="0x05"/>
+        <flag name="center_vertical" value="0x10"/>
+        <flag name="center_horizontal" value="0x01"/>
+        <flag name="center" value="0x11"/>
+    </attr>
+    <attr format="reference" name="progressLayout"/>
+    <attr format="reference" name="qupaiRecorderTimelineClip"/>
+    <bool name="qupai_recorder_timeline_time_indicator">true</bool>
+    <color name="balloon_bg_color">#ffc600</color>
+    <color name="black_transparent_50">#80000000</color>
+    <color name="btn_qupai_sdk_editor_action_bg_pressed">#1a000000</color>
+    <color name="defalut_primary_color">#02d4e1</color>
+    <color name="drafts_action_line">#0D000000</color>
+    <color name="powered_text_color">#adadad</color>
+    <color name="quit_confirm_normal">@android:color/white</color>
+    <color name="qupai_black_opacity_30pct">#4d000000</color>
+    <color name="qupai_black_opacity_40pct">#66000000</color>
+    <color name="qupai_black_opacity_50pct">#80000000</color>
+    <color name="qupai_gray_0xf0">#f0f0f0</color>
+    <color name="qupai_recorder_timeline_background">#e9e9e9</color>
+    <color name="qupai_recording_tip_text_color">@color/defalut_primary_color</color>
+    <color name="qupai_recording_tip_text_color_long">@android:color/white</color>
+    <color name="qupai_recording_tip_text_color_short">@android:color/white</color>
+    <color name="qupai_transparent">#00ffffff</color>
+    <color name="qupai_white_opacity_70pct">#b3000000</color>
+    <color name="tutorial_text_color">#784700</color>
+    <declare-styleable name="AlertDialog"><attr name="progressLayout"/><attr name="horizontalProgressLayout"/></declare-styleable>
+    <declare-styleable name="CircleProgressBar"><attr format="dimension" name="backgroundWidth"/><attr format="dimension" name="backgroundHeight"/><attr format="dimension" name="progressWidth"/><attr format="dimension" name="progressThickness"/><attr format="color|reference" name="progressColor"/></declare-styleable>
+    <declare-styleable name="FrameLayout_Layout"><attr name="android:layout_gravity"/><attr name="android:layout_marginTop"/><attr name="android:layout_marginLeft"/><attr name="android:layout_marginRight"/><attr name="android:layout_marginBottom"/><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="layout_reference"/></declare-styleable>
+    <declare-styleable name="WeightLayout"><attr format="float" name="weightWidth"/><attr format="float" name="weightHeight"/><attr format="boolean" name="keepAspectRatio"/></declare-styleable>
+    <declare-styleable name="WeightLayout_Layout"><attr format="float" name="layout_weightX"/><attr format="float" name="layout_weightY"/></declare-styleable>
+    <declare-styleable name="qupai.AspectRatioLayout"><attr format="integer" name="qupai.originalWidth"/><attr format="integer" name="qupai.originalHeight"/></declare-styleable>
+    <declare-styleable name="qupai.AspectRatioLayout_Layout"><attr name="android:layout_gravity"/><attr name="android:layout_marginTop"/><attr name="android:layout_marginLeft"/><attr name="android:layout_marginRight"/><attr name="android:layout_marginBottom"/><attr name="android:layout_width"/><attr name="android:layout_height"/></declare-styleable>
+    <dimen name="capture_margin">20dp</dimen>
+    <dimen name="powered_margin">5dp</dimen>
+    <dimen name="qupai_action_bar_size_recorder_long">60dp</dimen>
+    <dimen name="qupai_action_bar_size_recorder_short">45dp</dimen>
+    <dimen name="qupai_timeline_size_recorder_long">45dp</dimen>
+    <dimen name="qupai_timeline_size_recorder_short">4dp</dimen>
+    <item name="beautyBtn" type="id"/>
+    <item name="btn_gallery" type="id"/>
+    <item name="btn_save" type="id"/>
+    <item name="btn_self_timer" type="id"/>
+    <item name="btn_switch_camera" type="id"/>
+    <item name="camera_frame" type="id"/>
+    <item name="clip_list" type="id"/>
+    <item name="closeBtn" type="id"/>
+    <item name="min_capture_duration_spacer" type="id"/>
+    <item name="nextBtn" type="id"/>
+    <item name="qupai_event_record_abandon" type="id"/>
+    <item name="qupai_event_record_autonext" type="id"/>
+    <item name="qupai_event_record_manualnext" type="id"/>
+    <item name="qupai_event_record_max" type="id"/>
+    <item name="qupai_event_record_min_tutorial" type="id"/>
+    <item name="qupai_event_record_quit" type="id"/>
+    <item name="qupai_event_record_retake" type="id"/>
+    <item name="qupai_event_sdk_encode_finish" type="id"/>
+    <item name="qupai_event_sdk_record_finish" type="id"/>
+    <item name="qupai_event_sdk_record_start" type="id"/>
+    <item name="qupai_event_sdk_start" type="id"/>
+    <item name="record_timeline" type="id"/>
+    <item name="timeline_underlay" type="id"/>
+    <string name="powered_text"/>
+    <string name="qupai_beautyskin_close">已关闭美颜功能</string>
+    <string name="qupai_beautyskin_open">已开启美颜功能</string>
+    <string name="qupai_camera_zoom_indicator">×%01.1f</string>
+    <string name="qupai_dlg_button_cancel">取消</string>
+    <string name="qupai_dlg_button_confirm">确定</string>
+    <string name="qupai_dlg_record_abandon_message">要重新拍摄吗？</string>
+    <string name="qupai_dlg_record_abandon_quit">放弃拍摄</string>
+    <string name="qupai_dlg_record_abandon_reset">重新拍摄</string>
+    <string name="qupai_message_camera_acquisition_failure">暂时无法录制\n请确认摄像机是否已被其它程序占用</string>
+    <string name="qupai_message_no_memory_failure">手机存储空间不足，录制失败</string>
+    <string name="qupai_no_sdcard_exit">SD卡不可用,不能录制</string>
+    <string name="qupai_recorder_timeline_time_format">%.1f秒</string>
+    <string name="qupai_simple_workspace_dir">qupai_simple_workspace</string>
+    <string name="qupai_video_recorder_tip_before_start_1">按住拍摄</string>
+    <string name="qupai_video_recorder_tip_progress_1">松开暂停</string>
+    <string name="qupai_video_recorder_tip_recording_continue">按住继续</string>
+    <style name="ProgressBar.Qupai.Render" parent="">
+        <item name="android:indeterminateDrawable">@drawable/progress_qupai_circle</item>
+        <item name="android:indeterminateDuration">800</item>
+        <item name="android:minWidth">76dip</item>
+        <item name="android:maxWidth">76dip</item>
+        <item name="android:minHeight">76dip</item>
+        <item name="android:maxHeight">76dip</item>
+        <item name="android:max">100</item>
+    </style>
+    <style name="Qupai.ActivityNoAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_qupai_exit</item>
+    </style>
+    <style name="Qupai.Text.BalloonTip" parent="">
+        <item name="android:textColor">@color/qupai_recording_tip_text_color</item>
+    </style>
+    <style name="Qupai.Text.BalloonTip.Large">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Qupai.Text.BalloonTip.Medium">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Qupai.Text.Recorder.BalloonTip" parent="">
+        <item name="android:textColor">@color/qupai_recording_tip_text_color</item>
+    </style>
+    <style name="Qupai.Text.Recorder.BalloonTip.Large">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/qupai_recording_tip_text_color</item>
+    </style>
+    <style name="Qupai.Text.Recorder.BalloonTip.Medium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/qupai_recording_tip_text_color</item>
+    </style>
+    <style name="Qupai.Text.Recorder.BalloonTip.Mediumless">
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Qupai.Text.Recorder.BalloonTip.Small">
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="Theme.Dialog.Overlay" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- from Theme.Dialog.NoFrame -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+    <style name="Theme.Dialog.Overlay.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Theme.Qupai.Dialog.RenderProgress.Alipay" parent="android:Theme.DeviceDefault.Dialog.MinWidth">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Qupai.Video" parent="android:Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Theme.Qupai.Video.Default" parent="Theme.Qupai.Video">
+        <item name="qupaiRecorderTimelineClip">@drawable/theme_default_qupai_recorder_timeline_clip</item>
+    </style>
+    <style name="Theme.RenderProgress" parent="android:Theme.DeviceDefault.Dialog.MinWidth">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Widget.AbsHListView" parent="android:Widget">
+        <item name="android:scrollbars">horizontal</item>
+        <item name="android:fadingEdge">horizontal</item>
+    </style>
+    <style name="Widget.ActionButton.Qupai.Recorder" parent="">
+        <item name="android:padding">4dp</item>
+    </style>
+    <style name="Widget.HListView" parent="Widget.AbsHListView">
+        <item name="android:listSelector">@android:drawable/list_selector_background</item>
+        <item name="android:cacheColorHint">?android:attr/colorBackgroundCacheHint</item>
+        <item name="android:divider">@null</item>
+    </style>
+</resources>

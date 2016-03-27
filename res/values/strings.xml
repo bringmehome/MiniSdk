@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">趣拍</string>
+    <string name="tv_max_time">最大时长:</string>
+    <string name="tv_min_time">最短时长:</string>
+    <string name="tv_rate">码率:</string>
+    <string name="more_music">更多音乐:</string>
+    <string name="tv_more_music">更多音乐</string>
+    <string name="lead_in">开启导入:</string>
+    <string name="tv_watermark">水印:</string>
+    <string name="tv_need_edit_page">是否需要编辑界面:</string>
+    <string name="camera_font_on">默认开启前置摄像头</string>
+    <string name="flash_light_view_on">闪光灯是否显示</string>
+    <string name="beauty_skin_view_on">美颜是否显示</string>
+    <string name="timeline_indicator_on">时间提示是否显示</string>
+    <string name="beauty_skin_on">美颜是否开启</string>
+    <string name="beauty_skin_progress">美颜比例</string>
+    <string name="capture_height">拍摄布局高度</string>
+    <string name="capture_height_hint"></string>
+    <string name="default_time">默认时长为8秒</string>
+    <string name="default_min_time">最短时长为2秒</string>
+    <string name="defalut_rate">默认码率为2兆,码率越小质量越差，合成更快</string>
+    <string name="defalut_watermark">传1和2，分别代表右上，右下，默认1</string>
+    <string name="defalut_beauty_progress">默认的美颜参数设置，1-100，不设默认为80</string>
+    <string name="video_width">宽:</string>
+    <string name="video_height">高:</string>
+    <string name="btn_auth">鉴权</string>
+    <string name="btn_record">录制</string>
+    <string name="mini_upload">upload</string>
+    <string name="open_video">点击打开已上传任务</string>
+    <string name="output_video_size">输出分辨率：\n推荐：320*240 480*480 360*640</string>
+    <string name="upload">上传</string>
+    <string name="upload_complete">上传成功打开链接</string>
+    <string name="uploading">正在上传</string>
+    <string name="upload_taskclear_Btn">清空上传任务</string>
+    <string name="auth_success">鉴权成功,可以上传</string>
+    <string name="upload_fiald">上传失败</string>
+</resources>
