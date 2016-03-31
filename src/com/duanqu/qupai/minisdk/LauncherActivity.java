@@ -112,6 +112,7 @@ public class LauncherActivity extends Activity {
 				.configureMuxer(Contant.DEFAULT_VIDEO_MOV_FLAGS_KEY,
 						Contant.DEFAULT_VIDEO_MOV_FLAGS_VALUE).build();
 
+		float sdads = getResources().getDimension(R.dimen.qupai_recorder_capture_height_size);
 		/**
 		 * 界面参数
 		 */
@@ -127,9 +128,7 @@ public class LauncherActivity extends Activity {
 				.setBeautySkinOn(true)// 是否开启美颜
 				.setCameraFacing(0)// 1 开启 前摄像头0开启后摄像头
 				.setVideoSize(480, 480)// 输出视频的尺寸–建议320*240 480*480 360*640
-				.setCaptureHeight(
-						getResources().getDimension(
-								R.dimen.qupai_recorder_capture_height_size))// 拍摄布局
+				.setCaptureHeight(sdads)// 拍摄布局
 				.setBeautySkinViewOn(true)// 美颜是否显示
 				.setFlashLightOn(true)// 闪光灯是否显示
 				.setTimelineTimeIndicator(true)// 时间提示是否显示

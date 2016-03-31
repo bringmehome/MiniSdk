@@ -1,44 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent" >
+
     <ListView
         android:id="@+id/upload_list"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
     </ListView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
+
         <Button
             android:id="@+id/btn_auth"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/btn_auth"/>
+            android:text="@string/btn_auth" />
 
         <Button
             android:id="@+id/recordMultiBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/btn_record"/>
+            android:text="@string/btn_record" />
 
         <Button
             android:id="@+id/uploadTaskClearBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="@string/upload_taskclear_Btn"/>
-
+            android:text="@string/upload_taskclear_Btn" />
     </LinearLayout>
-
-
 
 </FrameLayout>
