@@ -18,6 +18,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/initmyca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="初始化" />
+
             </LinearLayout>
 
             <LinearLayout
